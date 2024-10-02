@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 function SharedContentReceiver() {
   const [sharedData, setSharedData] = useState({
@@ -32,6 +33,9 @@ function SharedContentReceiver() {
 
   return (
     <div>
+      <Helmet>
+        <title>Share Files</title>
+      </Helmet>
       <h1>Shared Files</h1>
       <p>Title: {sharedData.title}</p>
       <p>Description: {sharedData.text}</p>
