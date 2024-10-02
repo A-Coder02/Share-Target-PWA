@@ -1,5 +1,4 @@
 {
-  "scope": ".",
   "short_name": "React App",
   "name": "Create React App Sample",
   "icons": [
@@ -21,8 +20,8 @@
   ],
   "id": "/",
   "start_url": ".",
-  "display": "browser",
-  "display_override": ["browser"],
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "screenshots": [
