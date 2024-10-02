@@ -21,6 +21,7 @@
   "id": "/",
   "start_url": ".",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "screenshots": [
@@ -56,5 +57,11 @@
         }
       ]
     }
-  }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+myapp",
+      "url": "/?url=%s"
+    }
+  ]
 }
