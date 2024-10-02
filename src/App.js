@@ -9,7 +9,7 @@ function App() {
       element: <Home />,
     },
     {
-      path: "/shared-content-receiver",
+      path: "/share",
       element: <SharedContentReceiver />,
     },
   ]);

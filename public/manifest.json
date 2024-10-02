@@ -43,7 +43,7 @@
     }
   ],
   "share_target": {
-    "action": "/shared-content-receiver",
+    "action": "/share",
     "enctype": "multipart/form-data",
     "method": "POST",
     "params": {

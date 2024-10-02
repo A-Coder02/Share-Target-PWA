@@ -1,22 +1,51 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 function SharedContentReceiver() {
-  const location = useLocation();
+  const [sharedData, setSharedData] = useState({
+    title: "",
+    text: "",
+    url: "",
+    file: null,
+  });
 
-  // Parse the query parameters
-  const params = new URLSearchParams(location.search);
-  const title = params.get('name');
-  const text = params.get('description');
-  const url = params.get('link');
+  useEffect(() => {
+    // Get the shared data from the URL params or POST data
+    const handleSharedData = async () => {
+      // const formData = new FormData();
+
+      if (navigator.canShare && window.location.pathname === "/shared-files") {
+        // Handle the shared POST data here
+        const data = window.location.href.split("?")[1];
+        const urlParams = new URLSearchParams(data);
+
+        const title = urlParams.get("name");
+        const text = urlParams.get("description");
+        const url = urlParams.get("link");
+        const file = urlParams.get("image");
+
+        setSharedData({ title, text, url, file });
+      }
+    };
+
+    handleSharedData();
+  }, []);
 
   return (
     <div>
-      <h1>Shared Content</h1>
-      <p><strong>Title:</strong> {title}</p>
-      <p><strong>Description:</strong> {text}</p>
-      <p><strong>URL:</strong> <a href={url}>{url}</a></p>
+      <h1>Shared Files</h1>
+      <p>Title: {sharedData.title}</p>
+      <p>Description: {sharedData.text}</p>
+      <p>
+        URL: <a href={sharedData.url}>{sharedData.url}</a>
+      </p>
+      {sharedData.file && (
+        <div>
+          <p>Image: {sharedData.file}</p>
+          <img src={URL.createObjectURL(sharedData.file)} alt="shared" />
+        </div>
+      )}
     </div>
   );
 }
-
 export default SharedContentReceiver;
