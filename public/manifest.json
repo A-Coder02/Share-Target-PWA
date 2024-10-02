@@ -22,12 +22,7 @@
   "id": "/",
   "start_url": ".",
   "display": "browser",
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "minimal-ui",
-    "browser"
-  ],
+  "display_override": ["browser"],
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "screenshots": [
