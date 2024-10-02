@@ -4,7 +4,7 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
@@ -22,6 +22,24 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "brand.png",
+      "sizes": "1040x1040",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Wonder Widgets",
+      "description": "Compress and compare images with different codecs right in your browser."
+    },
+    {
+      "src": "brand.png",
+      "sizes": "1040x1040",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Wonder Widgets Desktop",
+      "description": "Compress and compare images with different codecs right in your browser."
+    }
+  ],
   "share_target": {
     "action": "/shared-content-receiver",
     "enctype": "multipart/form-data",
