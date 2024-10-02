@@ -21,8 +21,13 @@
   ],
   "id": "/",
   "start_url": ".",
-  "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "display": "browser",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "screenshots": [
